@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Flow Extension",
+  "version": "1.0",
+  "description": "A Chrome extension created from a Vite React app.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  }
+}
