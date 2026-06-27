@@ -17,6 +17,15 @@ connectDB();
 
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      https://focus-flow-vite.vercel.app/,
+    ],
+    credentials: true,
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("API Running...");
