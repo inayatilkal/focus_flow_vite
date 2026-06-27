@@ -21,7 +21,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      https://focus-flow-vite.vercel.app/,
+      "https://focus-flow-vite.vercel.app/",
     ],
     credentials: true,
   })
