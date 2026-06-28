@@ -98,6 +98,7 @@ function App() {
 
   const handleSignOut = () => {
     localStorage.removeItem("token");
+    sessionStorage.removeItem("token");
     setUser(null);
   };
 
