@@ -127,22 +127,21 @@ export default function Timer({
   };
 
   const setTimer = (newMode) => {
-
+    if (alarmRef.current) {
+    alarmRef.current.pause();
+    alarmRef.current.currentTime = 0;
+    alarmRef.current.loop = false;
+  }
     setIsRunning(false);
-
     setMode(newMode);
-
     setTimeLeft(getTimeForMode(newMode));
-
     setExplanation(getExplanationForMode(newMode));
-
   };
 
   const handleTimerEnd = () => {
 
   // 🔊 Play alarm continuously
   if (alarmRef.current) {
-    alarmRef.current.loop = true;
     alarmRef.current.currentTime = 0;
     alarmRef.current.play().catch(console.error);
   }
@@ -183,21 +182,7 @@ export default function Timer({
 
       intervalRef.current = window.setInterval(() => {
 
-        setTimeLeft((prevTime) => {
-
-          if (prevTime <= 1) {
-
-            setIsRunning(false);
-
-            handleTimerEnd();
-
-            return 0;
-
-          }
-
-          return prevTime - 1;
-
-        });
+        setTimeLeft((prevTime) => Math.max(prevTime-1, 0));
 
       }, 1000);
 
@@ -219,6 +204,13 @@ export default function Timer({
 
   }, [isRunning, mode]);
 
+  useEffect(() => {
+    if(timeLeft === 0 && isRunning) {
+      setIsRunning(false);
+      handleTimerEnd();
+    }
+  }, [timeLeft, isRunning])
+
   const handleStartPause = () => {
 
     if (!isRunning) {
@@ -232,11 +224,13 @@ export default function Timer({
   };
 
   const handleReset = () => {
-
+    if (alarmRef.current) {
+    alarmRef.current.pause();
+    alarmRef.current.currentTime = 0;
+    alarmRef.current.loop = false;
+  }
     setIsRunning(false);
-
     setTimeLeft(getTimeForMode(mode));
-
   };
 
   const handleClosePopup = () => {
@@ -249,7 +243,7 @@ export default function Timer({
   }
 
   setShowPopup(false);
-
+  setTimeLeft(getTimeForMode(mode));
   // Automatically start next timer
   setIsRunning(true);
 };
