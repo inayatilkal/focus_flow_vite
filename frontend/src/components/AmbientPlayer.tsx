@@ -3,8 +3,8 @@ import { Volume2, VolumeX, CloudRain, Waves, TreePine } from 'lucide-react';
 
 const sounds = [
   { name: 'Rain', url: '/sounds/rain.mp3', icon: <CloudRain size={32} />, description: 'The gentle sound of falling rain, perfect for focus and relaxation.' },
-  { name: 'Ocean Waves', url: './src/sounds/ocean-waves.mp3', icon: <Waves size={32} />, description: 'The rhythmic crashing of ocean waves, ideal for a calming atmosphere.' },
-  { name: 'Forest', url: './src/sounds/forest.mp3', icon: <TreePine size={32} />, description: 'The peaceful ambiance of a forest, with birds chirping and leaves rustling.' },
+  { name: 'Ocean Waves', url: '/sounds/ocean-waves.mp3', icon: <Waves size={32} />, description: 'The rhythmic crashing of ocean waves, ideal for a calming atmosphere.' },
+  { name: 'Forest', url: '/sounds/forest.mp3', icon: <TreePine size={32} />, description: 'The peaceful ambiance of a forest, with birds chirping and leaves rustling.' },
 ];
 
 export default function AmbientPlayer() {
