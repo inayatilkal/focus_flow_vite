@@ -17,13 +17,22 @@ Designed with a clean, responsive UI and secure authentication, Focus Flow provi
 > Add screenshots of:
 - Landing / Authentication Page
   <p align="center">
-    <img src="dsc.png" alt="Session Analysis" width="900">
+    <img src="frontend/public/f.png" alt="Session Analysis" width="900">
   </p>
   
 - Dashboard
+  <p align="center">
+    <img src="frontend/public/fh.png" alt="Session Analysis" width="900">
+  </p>
 - Task Management
-- Pomodoro Timer
+  <p align="center">
+    <img src="frontend/public/ft.png" alt="Session Analysis" width="900">
+  </p>
+  
 - Productivity Dashboard
+  <p align="center">
+    <img src="frontend/public/ff.png" alt="Session Analysis" width="900">
+  </p>
 
 
 ---
