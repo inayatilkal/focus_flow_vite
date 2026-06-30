@@ -16,16 +16,15 @@ Designed with a clean, responsive UI and secure authentication, Focus Flow provi
 
 > Add screenshots of:
 - Landing / Authentication Page
+  <p align="center">
+    <img src="dsc.png" alt="Session Analysis" width="900">
+  </p>
+  
 - Dashboard
 - Task Management
 - Pomodoro Timer
 - Productivity Dashboard
 
-Example:
-
-```md
-![Dashboard](./screenshots/dashboard.png)
-```
 
 ---
 
@@ -272,7 +271,7 @@ Contributions are welcome!
 **Inayat Ilkal**
 
 - GitHub: https://github.com/inayatilkal
-- LinkedIn: *(Add your LinkedIn profile URL)*
+- LinkedIn: *https://www.linkedin.com/in/inayat-ilkal/*
 
 ---
 
